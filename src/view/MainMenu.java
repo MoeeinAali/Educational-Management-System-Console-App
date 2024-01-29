@@ -15,9 +15,17 @@ public class MainMenu {
         String command;
         while (true) {
             command = Menu.getScanner().nextLine();
-            if (command.matches(regexContainer.getRegex("TEACHER_MENU")){
-
+            if (command.matches(regexContainer.getRegex("TEACHER_MENU"))){
+                if (controller.isLoggedInUserStudent()){
+                    System.out.println("Access Denied!");
+                }
+                else {
+                    return "teacher menu";
+                }
+            } else if (command.matches(regexContainer.getRegex("STUDENT_MENU")))) {
+                
             }
+
 
         }
     }
