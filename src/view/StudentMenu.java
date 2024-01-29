@@ -23,6 +23,12 @@ public class StudentMenu {
             }
             if ((matcher = Menu.getMatcher(command,regexContainer.getRegex("TAKE_COURSE")))!=null){
                 System.out.println(controller.takeCourse(matcher.group("name")));
+            } else if (command.matches(regexContainer.getRegex("SHOW_MY_COURSES"))) {
+                System.out.println(controller.showMyCourses());
+            } else if (command.matches(regexContainer.getRegex("ALL_COURS"))) {
+                System.out.println(controller.showAllCourses);
+            }else {
+                System.out.println("Invalid Command!");
             }
         }
     }
