@@ -1,5 +1,6 @@
 package controller;
 
+import model.Course;
 import model.Student;
 import model.Teacher;
 import view.LoginMenu;
@@ -100,9 +101,13 @@ public class Controller {
         loggedInTeacher.addCourse(name, capacity);
         return "course added successfully";
     }
-    public String showMycourses(){
-        StringBuilder res = new StringBuilder();
-
+    public String showMyCourses(){
+        StringBuilder result = new StringBuilder();
+        for (Course i : this.loggedInStudent.getCourses()){
+            result.append(i.toString());
+            result.append("\n");
+        }
+        return result.toString();
     }
 
 
