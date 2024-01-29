@@ -1,7 +1,6 @@
 package view;
 
 import controller.Controller;
-import model.Student;
 
 import java.util.regex.Matcher;
 
@@ -15,21 +14,20 @@ public class StudentMenu {
     public void run() {
         Matcher matcher;
         String command;
-        RegexContainer regexContainer = new RegexContainer("../Regexes.properties");
+
         while (true) {
             command = Menu.getScanner().nextLine();
-            if (command.matches(regexContainer.getRegex("BACK"))) {
+            if (command.matches("^\\s*back\\s*"))
                 return;
-            }
-            if ((matcher = Menu.getMatcher(command,regexContainer.getRegex("TAKE_COURSE")))!=null){
+
+            if ((matcher = Menu.getMatcher(command, "^\\s*take\\s+course\\s+(?<name>\\S+)\\s*$")) != null)
                 System.out.println(controller.takeCourse(matcher.group("name")));
-            } else if (command.matches(regexContainer.getRegex("SHOW_MY_COURSES"))) {
+            else if (command.matches("^\\s*show\\s+my\\s+courses\\s*$"))
                 System.out.println(controller.showMyCourses());
-            } else if (command.matches(regexContainer.getRegex("ALL_COURS"))) {
+            else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$"))
                 System.out.println(controller.showAllCourses());
-            }else {
-                System.out.println("Invalid Command!");
-            }
+            else
+                System.out.println("invalid command!");
         }
     }
 }
