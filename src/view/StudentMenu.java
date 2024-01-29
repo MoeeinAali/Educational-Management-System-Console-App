@@ -26,7 +26,7 @@ public class StudentMenu {
             } else if (command.matches(regexContainer.getRegex("SHOW_MY_COURSES"))) {
                 System.out.println(controller.showMyCourses());
             } else if (command.matches(regexContainer.getRegex("ALL_COURS"))) {
-                System.out.println(controller.showAllCourses);
+                System.out.println(controller.showAllCourses());
             }else {
                 System.out.println("Invalid Command!");
             }
