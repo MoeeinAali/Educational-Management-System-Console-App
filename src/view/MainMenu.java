@@ -36,8 +36,6 @@ public class MainMenu {
             } else {
                 System.out.println("Invalid Command!");
             }
-
-
         }
     }
 }
