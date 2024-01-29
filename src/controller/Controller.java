@@ -122,11 +122,19 @@ public class Controller {
         return result.toString();
     }
 
-    public String takeCourse(String name){
+    public String takeCourse(String name) {
         Course course = Course.getCourseByName(name);
-        if (course==null){
+        if (course == null) {
             return "take course failed. Course not found!";
         }
+        if (course.isFull()) {
+            return "take course failed: full!";
+        }
+        if (loggedInStudent.getCourses().contains(course)) {
+            return "take course failed: you've already taken this course!";
+        }
+        loggedInStudent.takeCourse(course);
+        return "Course Taked Successfully!";
 
     }
 
