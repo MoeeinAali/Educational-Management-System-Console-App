@@ -101,16 +101,25 @@ public class Controller {
         loggedInTeacher.addCourse(name, capacity);
         return "course added successfully";
     }
-    public String showMyCourses(){
+
+    public String showMyCourses() {
         StringBuilder result = new StringBuilder();
-        for (Course i : this.loggedInStudent.getCourses()){
+        for (Course i : this.loggedInStudent.getCourses()) {
             result.append(i.toString());
             result.append("\n");
         }
         return result.toString();
     }
 
-
-
+    public String showAllCourses() {
+        StringBuilder result = new StringBuilder();
+        for (Teacher i : Teacher.getTeachers()) {
+            for (Course j : i.getCourses()) {
+                result.append(j.toString());
+                result.append("\n");
+            }
+        }
+        return result.toString();
+    }
 }
 
