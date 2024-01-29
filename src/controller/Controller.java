@@ -121,5 +121,14 @@ public class Controller {
         }
         return result.toString();
     }
+
+    public String takeCourse(String name){
+        Course course = Course.getCourseByName(name);
+        if (course==null){
+            return "take course failed. Course not found!";
+        }
+
+    }
+
 }
 
