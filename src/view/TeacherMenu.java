@@ -12,24 +12,20 @@ public class TeacherMenu {
     }
 
     public void run() {
-        RegexContainer regexContainer = new RegexContainer("../Regexes.properties");
         Matcher matcher;
         String command;
+
         while (true) {
             command = Menu.getScanner().nextLine();
-            if (command.matches(regexContainer.getRegex("BACK"))) {
+            if (command.matches("^\\s*back\\s*"))
                 return;
-            }
-            if ((matcher = Menu.getMatcher(command, regexContainer.getRegex("ADD_COURSE"))) != null) {
+
+            if ((matcher = Menu.getMatcher(command, "^\\s*add\\s+course\\s+(?<name>\\S+)\\s+(?<capacity>\\d+)\\s*$")) != null)
                 System.out.println(controller.addCourse(matcher.group("name"), Integer.parseInt(matcher.group("capacity"))));
-            } else if (command.matches(regexContainer.getRegex("ALL_COURSE"))) {
+            else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$"))
                 System.out.println(controller.showAllCourses());
-            }
-            else {
-                System.out.println("Invalid Command");
-            }
+            else
+                System.out.println("invalid command!");
         }
     }
-
-
 }
