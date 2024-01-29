@@ -9,7 +9,7 @@ public class Course {
     private final ArrayList<Student> students;
 
     public Course(String name, int capacity, Teacher teacher) {
-        this.name = new;
+        this.name = name;
         this.capacity = capacity;
         this.teacher = teacher;
         students = new ArrayList<>();
