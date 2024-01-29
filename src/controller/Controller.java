@@ -88,8 +88,14 @@ public class Controller {
         } else {
             return "login failed: user not found!";
         }
-
     }
+
+    public String logout() {
+        loggedInStudent = null;
+        loggedInTeacher = null;
+        return "logout successful";
+    }
+
 
 
 }
