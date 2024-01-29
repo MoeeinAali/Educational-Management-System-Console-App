@@ -134,9 +134,7 @@ public class Controller {
             return "take course failed: you've already taken this course!";
         }
         loggedInStudent.takeCourse(course);
-        return "Course Taked Successfully!";
-
+        return "Course taken Successfully!";
     }
-
 }
 
