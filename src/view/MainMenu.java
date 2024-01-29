@@ -1,4 +1,5 @@
 package view;
+
 import controller.Controller;
 import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
@@ -15,15 +16,25 @@ public class MainMenu {
         String command;
         while (true) {
             command = Menu.getScanner().nextLine();
-            if (command.matches(regexContainer.getRegex("TEACHER_MENU"))){
-                if (controller.isLoggedInUserStudent()){
+            if (command.matches(regexContainer.getRegex("TEACHER_MENU"))) {
+                if (controller.isLoggedInUserStudent()) {
                     System.out.println("Access Denied!");
-                }
-                else {
+                } else {
                     return "teacher menu";
                 }
-            } else if (command.matches(regexContainer.getRegex("STUDENT_MENU")))) {
-                
+            } else if (command.matches(regexContainer.getRegex("STUDENT_MENU"))) {
+                if (controller.isLoggedInUserStudent() == false) {
+                    System.out.println("Access Denied!");
+                } else {
+                    return "student menu";
+                }
+
+            } else if (command.matches(regexContainer.getRegex("LOGOUT"))) {
+                System.out.println(controller.logout());
+                return "logout";
+
+            } else {
+                System.out.println("Invalid Command!");
             }
 
 
