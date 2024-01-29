@@ -71,7 +71,23 @@ public class Controller {
         }
         return "register successful";
     }
-    public String login(String username,String password){
+
+    public String login(String username, String password) {
+        if ((loggedInTeacher = Teacher.getTeacherByUsername(username)) != null) {
+            if (loggedInTeacher.isPasswordCorrect(password) != true) {
+                loggedInTeacher = null;
+                return "login failed: incorrect password!";
+            }
+            return "login successful";
+        } else if ((loggedInStudent = Student.getStudentByUsername(username)) != null) {
+            if (loggedInStudent.isPasswordCorrect(password) != true) {
+                loggedInStudent = null;
+                return "login failed: incorrect password!";
+            }
+            return "login successful";
+        } else {
+            return "login failed: user not found!";
+        }
 
     }
 
