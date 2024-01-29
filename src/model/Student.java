@@ -26,9 +26,30 @@ public class Student {
     public static void addStudent(String username, String password) {
         students.add(new Student(username, password));
     }
-    public void takeCourse(Course course){
+
+    public void takeCourse(Course course) {
         this.getCourses().add(course);
         course.getStudents().add(this);
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public boolean isPasswordCorrect(String password) {
+        if (this.getPassword().equals(password)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
