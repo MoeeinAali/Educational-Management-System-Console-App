@@ -23,7 +23,7 @@ public class TeacherMenu {
             if ((matcher = Menu.getMatcher(command, regexContainer.getRegex("ADD_COURSE"))) != null) {
                 System.out.println(controller.addCourse(matcher.group("name"), Integer.parseInt(matcher.group("capacity"))));
             } else if (command.matches(regexContainer.getRegex("ALL_COURSE"))) {
-                System.out.println(controller.showAllCourse());
+                System.out.println(controller.showAllCourses());
             }
             else {
                 System.out.println("Invalid Command");
