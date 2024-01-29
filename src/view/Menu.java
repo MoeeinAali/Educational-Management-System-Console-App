@@ -16,7 +16,7 @@ public class Menu {
     }
 
     public static Scanner getScanner() {
-        return Scanner;
+        return scanner;
     }
 
 }
