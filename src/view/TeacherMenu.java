@@ -12,7 +12,7 @@ public class TeacherMenu {
     }
 
     public void run() {
-        RegexContainer regexContainer = new RegexContainer();
+        RegexContainer regexContainer = new RegexContainer("../Regexes.properties");
         Matcher matcher;
         String command;
         while (true) {
