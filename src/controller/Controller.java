@@ -7,6 +7,8 @@ import view.MainMenu;
 import view.StudentMenu;
 import view.TeacherMenu;
 
+import javax.print.attribute.standard.NumberUp;
+
 public class Controller {
     private Student loggedInStudent;
     private Teacher loggedInTeacher;
@@ -21,6 +23,18 @@ public class Controller {
         teacherMenu = new TeacherMenu(this);
         studentMenu = new StudentMenu(this);
     }
+
+    public boolean isLoggedInUserStudent() {
+        if (loggedInStudent == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    public void run(){
+
+    }
+
 
 }
 
