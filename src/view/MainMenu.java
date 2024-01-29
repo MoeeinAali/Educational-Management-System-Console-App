@@ -1,7 +1,6 @@
 package view;
 
 import controller.Controller;
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
 public class MainMenu {
     private Controller controller;
@@ -11,31 +10,25 @@ public class MainMenu {
     }
 
     public String run() {
-        RegexContainer regexContainer = new RegexContainer("../Regexes.properties");
-
         String command;
+
         while (true) {
             command = Menu.getScanner().nextLine();
-            if (command.matches(regexContainer.getRegex("TEACHER_MENU"))) {
-                if (controller.isLoggedInUserStudent()) {
-                    System.out.println("Access Denied!");
-                } else {
-                    return "teacher menu";
-                }
-            } else if (command.matches(regexContainer.getRegex("STUDENT_MENU"))) {
-                if (controller.isLoggedInUserStudent() == false) {
-                    System.out.println("Access Denied!");
-                } else {
+            if (command.matches("^\\s*teacher\\s+menu\\s*$")) {
+                if (controller.isLoggedInUserStudent())
+                    System.out.println("Access denied!");
+                else
+                    return "teacher Menu";
+            } else if (command.matches("^\\s*student\\s+menu\\s*$")) {
+                if (!controller.isLoggedInUserStudent())
+                    System.out.println("access denied!");
+                else
                     return "student menu";
-                }
-
-            } else if (command.matches(regexContainer.getRegex("LOGOUT"))) {
+            } else if (command.matches("^\\s*logout\\s*$")) {
                 System.out.println(controller.logout());
                 return "logout";
-
-            } else {
-                System.out.println("Invalid Command!");
-            }
+            } else
+                System.out.println("invalid command!");
         }
     }
 }
