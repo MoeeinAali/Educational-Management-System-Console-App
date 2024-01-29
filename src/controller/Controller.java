@@ -100,6 +100,10 @@ public class Controller {
         loggedInTeacher.addCourse(name, capacity);
         return "course added successfully";
     }
+    public String showMycourses(){
+        StringBuilder res = new StringBuilder();
+
+    }
 
 
 
