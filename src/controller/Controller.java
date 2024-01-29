@@ -8,7 +8,6 @@ import view.MainMenu;
 import view.StudentMenu;
 import view.TeacherMenu;
 
-import javax.print.attribute.standard.NumberUp;
 
 public class Controller {
     private Student loggedInStudent;
