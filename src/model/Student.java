@@ -22,5 +22,13 @@ public class Student {
         }
         return null;
     }
+
+    public static void addStudent(String username, String password) {
+        students.add(new Student(username, password));
+    }
+    public void takeCourse(Course course){
+        this.getCourses().add(course);
+        course.getStudents().add(this);
+    }
 }
 
