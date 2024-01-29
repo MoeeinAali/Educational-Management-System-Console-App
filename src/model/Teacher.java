@@ -23,23 +23,35 @@ public class Teacher {
         return null;
     }
 
+    public static void addTeacher(String username, String password) {
+        teachers.add(new Teacher(username, password));
+    }
+
+    public void addCourse(String name, int capacity) {
+        this.courses.add(new Course(name, capacity, this));
+    }
+
     public static ArrayList<Teacher> getTeachers() {
 //        return this.teachers;
         return teachers;
     }
-    public String getUsername(){
+
+    public String getUsername() {
 //        return this.username;
         return username;
     }
-    public String getPassword(){
+
+    public String getPassword() {
 //        return this.password;
         return password;
     }
-    public ArrayList<Course> getCourses(){
+
+    public ArrayList<Course> getCourses() {
         return courses;
 //        return this.courses;
     }
-    public boolean isPasswordCorrect(String password){
+
+    public boolean isPasswordCorrect(String password) {
         return this.getPassword().equals(password);
     }
 }
