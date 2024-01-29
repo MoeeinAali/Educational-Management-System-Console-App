@@ -96,6 +96,11 @@ public class Controller {
         return "logout successful";
     }
 
+    public String addCourse(String name, int capacity) {
+        loggedInTeacher.addCourse(name, capacity);
+        return "course added successfully";
+    }
+
 
 
 }
