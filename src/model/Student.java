@@ -13,7 +13,14 @@ public class Student {
         this.password = password;
         this.courses = new ArrayList<>();
     }
-    public static Student getStudentByUsername(String username){
+
+    public static Student getStudentByUsername(String username) {
+        for (Student i : students) {
+            if (i.getUsername().equals(username)) {
+                return i;
+            }
+        }
+        return null;
     }
 }
 
