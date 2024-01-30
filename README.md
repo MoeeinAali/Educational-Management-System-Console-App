@@ -1,5 +1,8 @@
-# AP-Project-EDU
+# AP-Project
 Project of Mr. Hosseinkhani's CE40244: Advanced Programming (Sharif University of Technology - Fall 2023)
+
+## Simple Application for **EDU**
+
 
 **Login Menu**
 - exit
