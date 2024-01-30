@@ -52,10 +52,7 @@ public class StudentMenu {
             else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$")) {
                 System.out.println(controller.showAllCourses());
             }
-            // Handle invalid commands
-            else {
-                System.out.println("invalid command!");
-            }
+
         }
     }
 }

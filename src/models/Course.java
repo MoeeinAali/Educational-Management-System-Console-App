@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Course {
     private final String name;
-    private final int capacity;
+    private int capacity;
     private final Teacher teacher;
     private final ArrayList<Student> students;
 
@@ -102,7 +102,15 @@ public class Course {
         return name + " | Instructor: " + teacher.getUsername() + " | Capacity: " + students.size() + "/" + capacity;
     }
 
-    public void deleteStudent(String name){
+    public void deleteStudent(String name) {
         this.students.remove(Student.getStudentByUsername(name));
+    }
+
+    public void setCapacity(int capacity) {
+        if (this.getSize() > capacity) {
+            System.out.println("Can't Resize this Course!");
+        } else {
+            this.capacity = capacity;
+        }
     }
 }

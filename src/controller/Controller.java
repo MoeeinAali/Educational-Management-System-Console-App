@@ -223,4 +223,10 @@ public class Controller {
         }
 
     }
+
+    public String resizeCourse(String name, int capacity) {
+        Course course = Course.getCourseByName(name);
+        course.setCapacity(capacity);
+        return "Capacity set Successfully!";
+    }
 }

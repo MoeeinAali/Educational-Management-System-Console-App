@@ -37,15 +37,16 @@ public class TeacherMenu {
             // Check if the command is to add a course
             if ((matcher = Menu.getMatcher(command, "^\\s*add\\s+course\\s+(?<name>\\S+)\\s+(?<capacity>\\d+)\\s*$")) != null)
                 System.out.println(controller.addCourse(matcher.group("name"), Integer.parseInt(matcher.group("capacity"))));
+            // Check if the command is to set capacity of a course
+            if ((matcher = Menu.getMatcher(command, "^\\s*set\\s+capacity\\s+(?<name>\\S+)\\s+(?<capacity>\\d+)\\s*$")) != null)
+                System.out.println(controller.resizeCourse(matcher.group("name"), Integer.parseInt(matcher.group("capacity"))));
                 // Check if the command is to show all courses
             else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$"))
                 System.out.println(controller.showAllCourses());
                 // Check if the command is to show teacher's courses
             else if (command.matches("^\\s*show\\s+my\\s+courses\\s*$"))
                 System.out.println(controller.showTeacherCourses());
-                // Handle invalid commands
-            else
-                System.out.println("invalid command!");
+            // Handle invalid commands
         }
     }
 }
