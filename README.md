@@ -1,9 +1,20 @@
 # AP-Project
 Project of Mr. Hosseinkhani's CE40244: Advanced Programming (Sharif University of Technology - Fall 2023)
 
-## Simple Application for **EDU**
+## Educational Management System
+
+The Educational Management System is an application that allows you to easily and efficiently execute commands related to login, registration, and course management. Through the login, management, and logout menus, users can easily access different sections of the program.
+
+**Features:**
+- **Login and Registration:** Complete facilities for logging in or registering with different roles (teacher or student).
+- **Main Menus:** Quick access to teacher and student management menus for executing various commands.
+- **Course Management:** Ability for teachers to add new courses and for students to register for courses.
+- **Information Display:** View available courses and registered courses for each user.
+
+This application helps streamline the management and education process, fostering more efficient communication with users.
 
 
+## How to Use?
 **Login Menu**
 - exit
 - register `<role>` `<username>` `<password>`
