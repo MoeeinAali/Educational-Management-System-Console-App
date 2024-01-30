@@ -110,6 +110,16 @@ public class Controller {
         return result.toString();
     }
 
+    public String showTeacherCourses() {
+        StringBuilder result = new StringBuilder();
+        for (Course i : loggedInTeacher.getCourses()) {
+            result.append(i.toString());
+            System.out.println("test");
+//            result.append(" " + i.getSize() + "/" + i.getCapacity() + "\n");
+        }
+        return result.toString();
+    }
+
     public String showAllCourses() {
         StringBuilder result = new StringBuilder();
         for (Teacher i : Teacher.getTeachers()) {
@@ -135,5 +145,7 @@ public class Controller {
         loggedInStudent.takeCourse(course);
         return "Course taken Successfully!";
     }
+
+
 }
 
