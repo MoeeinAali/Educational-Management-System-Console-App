@@ -64,13 +64,19 @@ public class Controller {
 
     }
 
+//  Registration
     public String register(String username, String password, String role) {
+//        check if a username exists?
         if (Teacher.getTeacherByUsername(username) != null || Student.getStudentByUsername(username) != null) {
             return "register failed: username already exists";
         }
+//       handle strong password
+//        lengh > 5 | have A-Z|a-z|0-9
         if (password.length() < 5 || !password.matches(".*[A-Z].*") || !password.matches(".*[a-z].*") || !password.matches(".*[0-9].*")) {
             return "register failed: password is weak";
         }
+
+//      submit the role of new user
         if (role.equals("teacher")) {
             Teacher.addTeacher(username, password);
         } else if (role.equals("student")) {
