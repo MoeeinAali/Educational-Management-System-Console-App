@@ -12,7 +12,9 @@ The Educational Management System is an application that allows you to easily an
 - **Information Display:** View available courses and registered courses for each user.
 
 This application helps streamline the management and education process, fostering more efficient communication with users.
-
+## Documentation
+- [Class Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/ClassDiagram/README.md)
+- [Sequence Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/SequenceDiagram/README.md)
 
 ## How to Use?
 **Login Menu**
