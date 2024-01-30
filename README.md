@@ -5,8 +5,6 @@ Project of Mr. Hosseinkhani's CE40244: Advanced Programming (Sharif University o
 
 The Educational Management System is an application that allows you to easily and efficiently execute commands related to login, registration, and course management. Through the login, management, and logout menus, users can easily access different sections of the program.
 
-**[Read summary of Classes in this Proect](https://moeeinaali.github.io/AP-Project)**
-
 **Features:**
 - **Login and Registration:** Complete facilities for logging in or registering with different roles (teacher or student).
 - **Main Menus:** Quick access to teacher and student management menus for executing various commands.
@@ -17,6 +15,8 @@ This application helps streamline the management and education process, fosterin
 ## Documentation
 - [Class Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/ClassDiagram/README.md)
 - [Sequence Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/SequenceDiagram/README.md)
+- [Summary of `models` Class](https://moeeinaali.github.io/AP-Project)**
+ 
 
 ## How to Use?
 **Login Menu**
