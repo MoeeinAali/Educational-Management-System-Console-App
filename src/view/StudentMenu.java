@@ -17,17 +17,18 @@ public class StudentMenu {
 
         while (true) {
             command = Menu.getScanner().nextLine();
-            if (command.matches("^\\s*back\\s*"))
+            if (command.matches("^\\s*back\\s*")) {
                 return;
-
-            if ((matcher = Menu.getMatcher(command, "^\\s*take\\s+course\\s+(?<name>\\S+)\\s*$")) != null)
+            }
+            if ((matcher = Menu.getMatcher(command, "^\\s*take\\s+course\\s+(?<name>\\S+)\\s*$")) != null) {
                 System.out.println(controller.takeCourse(matcher.group("name")));
-            else if (command.matches("^\\s*show\\s+my\\s+courses\\s*$"))
+            } else if (command.matches("^\\s*show\\s+my\\s+courses\\s*$")) {
                 System.out.println(controller.showMyCourses());
-            else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$"))
+            } else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$")) {
                 System.out.println(controller.showAllCourses());
-            else
+            } else {
                 System.out.println("invalid command!");
+            }
         }
     }
 }

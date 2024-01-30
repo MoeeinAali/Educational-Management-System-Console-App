@@ -1,4 +1,4 @@
-package model;
+package models;
 
 import java.util.ArrayList;
 
@@ -52,6 +52,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return name + ") Instructor: " + teacher.getUsername() + " | Capacity: " + students.size() + "/" + capacity;
+        return name + " | Instructor: " + teacher.getUsername() + " | Capacity: " + students.size() + "/" + capacity;
     }
 }

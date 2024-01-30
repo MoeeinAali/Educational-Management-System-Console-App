@@ -17,18 +17,21 @@ public class MainMenu {
             if (command.matches("^\\s*teacher\\s+menu\\s*$")) {
                 if (controller.isLoggedInUserStudent())
                     System.out.println("access denied!");
-                else
+                else {
                     return "teacher menu";
+                }
             } else if (command.matches("^\\s*student\\s+menu\\s*$")) {
-                if (!controller.isLoggedInUserStudent())
+                if (!controller.isLoggedInUserStudent()) {
                     System.out.println("access denied!");
-                else
+                } else {
                     return "student menu";
+                }
             } else if (command.matches("^\\s*logout\\s*$")) {
                 System.out.println(controller.logout());
                 return "logout";
-            } else
+            } else {
                 System.out.println("invalid command!");
+            }
         }
     }
 }

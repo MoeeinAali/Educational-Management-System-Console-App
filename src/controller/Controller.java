@@ -1,8 +1,8 @@
 package controller;
 
-import model.Course;
-import model.Student;
-import model.Teacher;
+import models.Course;
+import models.Student;
+import models.Teacher;
 import view.LoginMenu;
 import view.MainMenu;
 import view.StudentMenu;
