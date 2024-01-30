@@ -15,7 +15,7 @@ This application helps streamline the management and education process, fosterin
 ## Documentation
 - [Class Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/ClassDiagram/README.md)
 - [Sequence Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/SequenceDiagram/README.md)
-- [Summary of `models` Class](https://moeeinaali.github.io/AP-Project)**
+- [Summary of `models` Class](https://moeeinaali.github.io/AP-Project)
  
 
 ## How to Use?
