@@ -16,9 +16,9 @@ public class MainMenu {
             command = Menu.getScanner().nextLine();
             if (command.matches("^\\s*teacher\\s+menu\\s*$")) {
                 if (controller.isLoggedInUserStudent())
-                    System.out.println("Access denied!");
+                    System.out.println("access denied!");
                 else
-                    return "teacher Menu";
+                    return "teacher menu";
             } else if (command.matches("^\\s*student\\s+menu\\s*$")) {
                 if (!controller.isLoggedInUserStudent())
                     System.out.println("access denied!");
