@@ -36,18 +36,22 @@ public class Course {
 
     public int getSize() {
         return students.size();
+
     }
 
     public int getCapacity() {
         return capacity;
+
     }
 
     public String getName() {
         return name;
+
     }
 
     public ArrayList<Student> getStudents() {
         return students;
+//
     }
 
     @Override
