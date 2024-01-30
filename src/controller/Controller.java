@@ -17,6 +17,8 @@ public class Controller {
     private final TeacherMenu teacherMenu;
     private final StudentMenu studentMenu;
 
+
+    //    Constructor
     public Controller() {
         loginMenu = new LoginMenu(this);
         mainMenu = new MainMenu(this);
@@ -24,6 +26,7 @@ public class Controller {
         studentMenu = new StudentMenu(this);
     }
 
+    //  Student or Teacher ?
     public boolean isLoggedInUserStudent() {
         if (loggedInStudent == null) {
             return false;
@@ -32,18 +35,24 @@ public class Controller {
         }
     }
 
+    //  Starts Controller from here
     public void run() {
+//        works with loginMenu
         if (loginMenu.run().equals("exit")) {
             return;
         } else {
             while (true) {
+//                fields of loginMenu
                 switch (mainMenu.run()) {
+//                  field1 : teacher menu
                     case "teacher menu":
                         teacherMenu.run();
                         break;
+//                  field2: student menu
                     case "student menu":
                         studentMenu.run();
                         break;
+//                  field3: logout
                     case "logout":
                         if (loginMenu.run().equals("exit")) {
                             return;
