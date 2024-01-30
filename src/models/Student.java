@@ -98,4 +98,9 @@ public class Student {
     public boolean isPasswordCorrect(String password) {
         return this.getPassword().equals(password);
     }
+
+    public void deleteCourse(String name) {
+        this.courses.remove(Course.getCourseByName(name));
+    }
+
 }

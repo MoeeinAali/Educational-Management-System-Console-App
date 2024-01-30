@@ -39,6 +39,11 @@ public class StudentMenu {
             if ((matcher = Menu.getMatcher(command, "^\\s*take\\s+course\\s+(?<name>\\S+)\\s*$")) != null) {
                 System.out.println(controller.takeCourse(matcher.group("name")));
             }
+            // Check if the command is to delete a course
+            if ((matcher = Menu.getMatcher(command, "^\\s*delete\\s+course\\s+(?<name>\\S+)\\s*$")) != null) {
+                System.out.println(controller.deleteCourse(matcher.group("name")));
+            }
+
             // Check if the command is to show student's courses
             else if (command.matches("^\\s*show\\s+my\\s+courses\\s*$")) {
                 System.out.println(controller.showMyCourses());

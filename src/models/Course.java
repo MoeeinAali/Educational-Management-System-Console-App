@@ -101,4 +101,8 @@ public class Course {
     public String toString() {
         return name + " | Instructor: " + teacher.getUsername() + " | Capacity: " + students.size() + "/" + capacity;
     }
+
+    public void deleteStudent(String name){
+        this.students.remove(Student.getStudentByUsername(name));
+    }
 }

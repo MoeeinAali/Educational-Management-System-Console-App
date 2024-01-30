@@ -212,4 +212,15 @@ public class Controller {
         loggedInStudent.takeCourse(course);
         return "Course taken successfully!";
     }
+
+    public String deleteCourse(String name) {
+        if (loggedInStudent.getCourses().contains(Course.getCourseByName(name))) {
+            Course.getCourseByName(name).deleteStudent(loggedInStudent.getUsername());
+            loggedInStudent.deleteCourse(name);
+            return "You left from this Course successfully!";
+        } else {
+            return "You don't have this course!";
+        }
+
+    }
 }
