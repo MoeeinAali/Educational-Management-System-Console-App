@@ -41,3 +41,4 @@ This application helps streamline the management and education process, fosterin
 - take course `<name>`
 - show my courses
 - show all courses
+- delete course `<name>`
