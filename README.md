@@ -13,8 +13,8 @@ The Educational Management System is an application that allows you to easily an
 
 This application helps streamline the management and education process, fostering more efficient communication with users.
 ## Documentations
-- [Class Diagram]()
-- [Sequence Diagram]()
+- [Class Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/ClassDiagram/README.md)
+- [Sequence Diagram](https://github.com/MoeeinAali/AP-Project/blob/main/Diagrams/SequenceDiagram/README.md)
 
 ## How to Use?
 **Login Menu**
