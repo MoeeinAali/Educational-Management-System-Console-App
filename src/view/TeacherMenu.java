@@ -24,6 +24,8 @@ public class TeacherMenu {
                 System.out.println(controller.addCourse(matcher.group("name"), Integer.parseInt(matcher.group("capacity"))));
             else if (command.matches("^\\s*show\\s+all\\s+courses\\s*$"))
                 System.out.println(controller.showAllCourses());
+            else if (command.matches("^\\s*show\\s+my\\s+courses\\s*$"))
+                System.out.println(controller.showTeacherCourses());
             else
                 System.out.println("invalid command!");
         }
