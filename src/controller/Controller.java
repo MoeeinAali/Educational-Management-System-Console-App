@@ -87,6 +87,7 @@ public class Controller {
         return "register successful";
     }
 
+//    login method handled here
     public String login(String username, String password) {
         if ((loggedInTeacher = Teacher.getTeacherByUsername(username)) != null) {
             if (loggedInTeacher.isPasswordCorrect(password) != true) {
@@ -135,6 +136,7 @@ public class Controller {
         return result.toString();
     }
 
+//    show all courses in any menu
     public String showAllCourses() {
         StringBuilder result = new StringBuilder();
         for (Teacher i : Teacher.getTeachers()) {
@@ -146,6 +148,7 @@ public class Controller {
         return result.toString();
     }
 
+//    taking course for students
     public String takeCourse(String name) {
         Course course = Course.getCourseByName(name);
         if (course == null) {
