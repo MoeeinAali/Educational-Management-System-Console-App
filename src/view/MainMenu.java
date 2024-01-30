@@ -8,7 +8,6 @@ public class MainMenu {
     public MainMenu(Controller controller) {
         this.controller = controller;
     }
-//    moeein
 
     public String run() {
         String command;
