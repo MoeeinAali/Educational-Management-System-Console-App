@@ -35,6 +35,7 @@ This application helps streamline the management and education process, fosterin
 - back
 - add course `<name>` `<capacity>`
 - show all courses
+- set capacity `<name>` `<capacity>`
 
 **Student Menu**
 - back
