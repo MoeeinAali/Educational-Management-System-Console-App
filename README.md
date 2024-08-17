@@ -29,15 +29,16 @@ This application helps streamline the management and education process, fosterin
 - student menu
 - logout
 
-**Teacher Menu**
-- back
-- add course `<name>` `<capacity>`
-- show all courses
-- set capacity `<name>` `<capacity>`
-
 **Student Menu**
 - back
 - take course `<name>`
 - show my courses
 - show all courses
 - delete course `<name>`
+
+**Teacher Menu**
+- back
+- add course `<name>` `<capacity>`
+- show all courses
+- set capacity `<name>` `<capacity>`
+
